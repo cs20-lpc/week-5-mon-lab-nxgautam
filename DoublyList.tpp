@@ -102,7 +102,7 @@ template <typename T>
 void DoublyList<T>::insert(int position, const T& elem) {
   // TO DO: Implement code to insert an element to list
 
-  if(position < 0 || position >= this->length)
+  if(position < 0 || position > this->length)
   {
     throw("Insert: error, position out of bounds");
   }
@@ -116,7 +116,7 @@ void DoublyList<T>::insert(int position, const T& elem) {
   Node * n = new Node(elem);
 
   n->prev = curr->prev;
-  n->next = curr->next;
+  n->next = curr;
   curr->prev->next = n;
   curr->prev = n;
 

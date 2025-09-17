@@ -18,7 +18,7 @@ int main()
     cout << dlist.getElement(1) << " ";
 
     dlist.remove(1);
-    dlist.getLength();
+    cout << dlist.getLength() << " ";
 
     dlist.replace(2, 54);
     cout << dlist.getElement(2) << " ";
